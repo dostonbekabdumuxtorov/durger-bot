@@ -28,6 +28,7 @@ export const Box = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 `
 
 export const Image = styled.img`
@@ -79,17 +80,50 @@ export const MinusBtn = styled.button`
     font-size:20px;
     border-radius:5px;
     color: white !important;
+    transition: .3s;
     font-family: 'Lexend' !important;
     background-color: red !important;
+    &:hover{
+        cursor:pointer;
+    }
+    &:active{
+        background-color:#EB4C42 !important;
+
+    }
 `
 
 export const PlusBtn = styled.button`
     width: 40px !important;
     height: 28px;
     border:none;
+    transition: .3s;
     font-size:20px;
     border-radius:5px;
     color: white !important;
     font-family: 'Lexend' !important;
     background-color: #F8A917 !important;
+    &:hover{
+        cursor:pointer;
+    }
+    &:active{
+        background-color:#A1E160 !important;
+    }
+`
+
+export const Badge = styled.div`
+    width: auto;
+    min-width: 30px;
+    height: 30px;
+    padding: 3px;
+    border-radius: 100%;
+    background-color: #F8A917 ;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    right: 10px;
+    top:5px;
+    box-shadow: 0px 0px 4px black;
 `

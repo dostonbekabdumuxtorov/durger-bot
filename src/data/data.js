@@ -4,6 +4,7 @@ import Hotdog from '../images/hotdog.gif';
 import Tako from '../images/tako.gif';
 import Pizza from '../images/pizza.gif';
 import Donut from '../images/donut.gif';
+import Giphy from '../images/giphy.gif';
 
 
 export const Products = [
@@ -51,8 +52,8 @@ export const Products = [
     },
     {
         id:8,
-        name:'Tako',
-        img:Tako,
+        name:'Flan',
+        img:Giphy,
         price:3.1
     },
     {
