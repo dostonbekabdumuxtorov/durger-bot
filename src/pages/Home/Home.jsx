@@ -19,9 +19,9 @@ const Home = () => {
     setrender(!render)
   }
 
-  window.Telegram.WebApp.MainButton.onClick = () =>{
-      navigate('/detail')
-  }
+  window.Telegram.WebApp.onEvent('mainButtonClicked', () =>{
+    navigate('/detail')
+  })
 
 
   function Adding(product) {
