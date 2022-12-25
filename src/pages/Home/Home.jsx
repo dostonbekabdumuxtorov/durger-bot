@@ -16,6 +16,8 @@ const Home = () => {
   }
 
   function Adding(product) {
+    console.log('window.Telegram', window.Telegram)
+    window.Telegram.MainButton.show()
     setactived([...actived, product]);
 
   }
