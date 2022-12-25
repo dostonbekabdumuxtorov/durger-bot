@@ -18,6 +18,7 @@ const Home = () => {
   function Adding(product) {
     console.log('window.Telegram', window.Telegram)
     window.Telegram.WebApp.MainButton.show()
+    window.Telegram.WebApp.MainButton.setText('Dostonbek iltimos')
     setactived([...actived, product]);
 
   }
