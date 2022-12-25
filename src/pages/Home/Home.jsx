@@ -15,12 +15,16 @@ const Home = () => {
     setrender(!render)
   }
 
+  window.Telegram.WebApp.MainButton.onClick = () =>{
+    alert('Hello world')
+  }
+
+
   function Adding(product) {
     console.log('window.Telegram', window.Telegram)
     window.Telegram.WebApp.MainButton.show()
     window.Telegram.WebApp.MainButton.setText('Dostonbek iltimos')
     setactived([...actived, product]);
-
   }
 
   function Buttons(condition) {
