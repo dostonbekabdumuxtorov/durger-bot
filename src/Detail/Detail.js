@@ -7,6 +7,8 @@ const Detail = () => {
     window.Telegram.WebApp.MainButton.setText('Ortga qaytish')
     window.Telegram.WebApp.onEvent('mainButtonClicked', () => {
         navigate('/')
+        window.Telegram.WebApp.MainButton.setText('Keyingisiga o`tish')
+
     })
     return (
         <Container>

@@ -15,17 +15,18 @@ export const Wrapper = styled.div`
     max-width: 400px;
     padding: 10px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 `
 
 export const Title = styled.h1`
-    font-size: 20px;
+    font-size: 33px;
     color: #fff;
     margin-top:10px;
     margin-bottom:10px;
-
+    font-family: 'Carter One';
 `
 
 export const Image = styled.img`
