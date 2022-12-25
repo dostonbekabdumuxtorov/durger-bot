@@ -17,6 +17,9 @@ const Home = () => {
     let target = actived.indexOf(item);
     actived.splice(target, 1)
     setrender(!render)
+    if(actived?.length===0){
+      window.Telegram.WebApp.MainButton.hide()
+    }
   }
 
   window.Telegram.WebApp.onEvent('mainButtonClicked', () =>{
