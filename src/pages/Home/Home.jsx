@@ -2,11 +2,15 @@ import React, { useState } from 'react'
 import { Add, Badge, Box, Container, Image, MinusBtn, Name, PlusBtn, Price, Row, Row1, Wrapper } from './style'
 import { Products } from '../../data/data';
 import { Skeleton } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate()
+
   let [actived, setactived] = useState([]);
   const [render, setrender] = useState(false);
   const [isloading, setisloading] = useState(true)
+
   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
   function Deleting(item) {
@@ -16,7 +20,7 @@ const Home = () => {
   }
 
   window.Telegram.WebApp.MainButton.onClick = () =>{
-    alert('Hello world')
+      navigate('/detail')
   }
 
 
