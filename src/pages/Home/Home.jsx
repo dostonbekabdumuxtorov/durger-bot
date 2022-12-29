@@ -11,7 +11,14 @@ const Home = () => {
   const [render, setrender] = useState(false);
   const [isloading, setisloading] = useState(true)
 
-  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  let tg = window.Telegram.WebApp;
+  tg.expand();
+
+
+  window.Telegram.WebApp.onEvent("mainbuttonClicked",function(){
+    tg.sendData({user:tg.initdataUnsafe.user,data:actived});
+  })
 
   function Deleting(item) {
     let target = actived.indexOf(item);
