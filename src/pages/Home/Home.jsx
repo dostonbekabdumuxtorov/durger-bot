@@ -36,12 +36,7 @@ const Home = () => {
   window.Telegram.WebApp.onEvent("mainButtonClicked",function(){
     // setword(`worded ${tg?.initDataUnsafe?.user?.first_name}`)
     // navigate('/detail',{state:tg?.initDataUnsafe?.user?.first_name})
-    tg.sendData( {
-      id:1,
-      name:'Burger',
-      img:Burger,
-      price:2.1
-  });
+    tg.sendData('salom Dostonbek ');
   })
 
   function Adding(product) {
