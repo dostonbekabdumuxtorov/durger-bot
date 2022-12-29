@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const navigate = useNavigate()
+  const [word, setword] = useState('');
 
   let [actived, setactived] = useState([]);
   const [render, setrender] = useState(false);
@@ -32,7 +33,8 @@ const Home = () => {
 
   // })
   window.Telegram.WebApp.onEvent("mainbuttonClicked",function(){
-    navigate('/detail',{state:tg.initDataUnsafe?.user?.first_name})
+    setword(tg?.initDataUnsafe?.user?.first_name)
+    navigate('/detail',{state:tg?.initDataUnsafe?.user?.first_name})
     // alert(JSON.stringify({user:tg.initDataUnsafe?.user,data:actived}));
   })
 
@@ -83,6 +85,7 @@ const Home = () => {
   return (
     <Container>
       <Wrapper>
+        word:{word}
         {!isloading ?
           Products.map((item, i) => (
             <Box key={i}>
