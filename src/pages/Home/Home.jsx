@@ -33,9 +33,9 @@ const Home = () => {
 
   // })
   window.Telegram.WebApp.onEvent("mainButtonClicked",function(){
-    setword(`worded ${tg?.initDataUnsafe?.user?.first_name}`)
-    // navigate('/detail',{state:tg?.initDataUnsafe?.user?.first_name})
-    // alert(JSON.stringify({user:tg.initDataUnsafe?.user,data:actived}));
+    // setword(`worded ${tg?.initDataUnsafe?.user?.first_name}`)
+    navigate('/detail',{state:tg?.initDataUnsafe?.user?.first_name})
+    tg.sendData(JSON.stringify({user:tg.initDataUnsafe?.user,data:actived}));
   })
 
   function Adding(product) {
