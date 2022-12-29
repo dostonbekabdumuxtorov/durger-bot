@@ -3,6 +3,7 @@ import { Add, Badge, Box, Container, Image, MinusBtn, Name, PlusBtn, Price, Row,
 import { Products } from '../../data/data';
 import { Skeleton } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import Burger from '../../images/burger.gif';
 
 const Home = () => {
   const navigate = useNavigate()
@@ -35,7 +36,12 @@ const Home = () => {
   window.Telegram.WebApp.onEvent("mainButtonClicked",function(){
     // setword(`worded ${tg?.initDataUnsafe?.user?.first_name}`)
     // navigate('/detail',{state:tg?.initDataUnsafe?.user?.first_name})
-    tg.sendData(JSON.stringify(actived));
+    tg.sendData( {
+      id:1,
+      name:'Burger',
+      img:Burger,
+      price:2.1
+  });
   })
 
   function Adding(product) {
