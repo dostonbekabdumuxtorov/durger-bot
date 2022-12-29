@@ -32,7 +32,7 @@ const Home = () => {
   // window.Telegram.WebApp.onEvent('mainButtonClicked', () =>{
 
   // })
-  window.Telegram.WebApp.onEvent("mainbuttonClicked",function(){
+  window.Telegram.WebApp.onEvent("mainButtonClicked",function(){
     setword(`worded ${tg?.initDataUnsafe?.user?.first_name}`)
     // navigate('/detail',{state:tg?.initDataUnsafe?.user?.first_name})
     // alert(JSON.stringify({user:tg.initDataUnsafe?.user,data:actived}));
