@@ -18,7 +18,6 @@ const Home = () => {
   console.log("main",{user:window.Telegram,data:actived})
 
   window.Telegram.WebApp.onEvent("mainbuttonClicked",function(){
-    tg.sendData(JSON.stringify({user:tg.initDataUnsafe.user,data:actived}));
     tg.sendData({user:tg.initDataUnsafe?.user,data:actived});
     navigate('/detail',{state:tg.initDataUnsafe?.user?.first_name})
   })
