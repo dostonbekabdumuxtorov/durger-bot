@@ -17,10 +17,7 @@ const Home = () => {
 
   console.log("main",{user:window.Telegram,data:actived})
 
-  window.Telegram.WebApp.onEvent("mainbuttonClicked",function(){
-    tg.sendData({user:tg.initDataUnsafe?.user,data:actived});
-    navigate('/detail',{state:tg.initDataUnsafe?.user?.first_name})
-  })
+  
 
   function Deleting(item) {
     let target = actived.indexOf(item);
@@ -32,9 +29,12 @@ const Home = () => {
   }
 
   // window.Telegram.WebApp.onEvent('mainButtonClicked', () =>{
-    
-  // })
 
+  // })
+  window.Telegram.WebApp.onEvent("mainbuttonClicked",function(){
+    navigate('/detail',{state:tg.initDataUnsafe?.user?.first_name})
+    tg.sendData(JSON.stringify({user:tg.initDataUnsafe?.user,data:actived}));
+  })
 
   function Adding(product) {
     console.log('window.Telegram', window.Telegram)
