@@ -86,7 +86,6 @@ const Home = () => {
   return (
     <Container>
       <Wrapper>
-        word:{word}
         {!isloading ?
           Products.map((item, i) => (
             <Box key={i}>
