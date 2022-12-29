@@ -15,9 +15,12 @@ const Home = () => {
   let tg = window.Telegram.WebApp;
   tg.expand();
 
+  console.log("main",{user:window.Telegram,data:actived})
 
   window.Telegram.WebApp.onEvent("mainbuttonClicked",function(){
-    tg.sendData({user:tg.initdataUnsafe.user,data:actived});
+    tg.sendData(JSON.stringify({user:tg.initDataUnsafe.user,data:actived}));
+    tg.sendData({user:tg.initDataUnsafe?.user,data:actived});
+    navigate('/detail',{state:tg.initDataUnsafe?.user?.first_name})
   })
 
   function Deleting(item) {
@@ -29,9 +32,9 @@ const Home = () => {
     }
   }
 
-  window.Telegram.WebApp.onEvent('mainButtonClicked', () =>{
-    navigate('/detail')
-  })
+  // window.Telegram.WebApp.onEvent('mainButtonClicked', () =>{
+    
+  // })
 
 
   function Adding(product) {
