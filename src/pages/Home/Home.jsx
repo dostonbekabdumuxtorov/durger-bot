@@ -34,9 +34,11 @@ const Home = () => {
 
   // })
   window.Telegram.WebApp.onEvent("mainButtonClicked",function(){
-    // setword(`worded ${tg?.initDataUnsafe?.user?.first_name}`)
+    setword(`worded ${tg?.initDataUnsafe?.user?.first_name}`)
     // navigate('/detail',{state:tg?.initDataUnsafe?.user?.first_name})
-    tg.sendData('salom Dostonbek ');
+    tg.sendData('salom Dostonbek');
+    alert(JSON.stringify(window.Telegram.WebApp?.initDataUnsafe));
+    window.alert('salom',JSON.stringify(window.Telegram.WebApp?.initDataUnsafe))
   })
 
   function Adding(product) {
@@ -91,6 +93,7 @@ const Home = () => {
             <Box key={i}>
               {Badgeed(item)}
               <Image src={item.img} />
+              {word}
               <Row>
                 <Name>{item.name}</Name>
                 <Price>{item.price}$</Price>
