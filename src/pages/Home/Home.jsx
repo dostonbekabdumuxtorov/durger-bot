@@ -37,7 +37,7 @@ const Home = () => {
   window.Telegram.WebApp.onEvent("mainButtonClicked",function(){
     setword(`worded ${tg?.initDataUnsafe?.user?.id}`)
     // navigate('/detail',{state:tg?.initDataUnsafe?.user?.first_name})
-    tg.sendData(actived);
+    tg.sendData('Dostonbek');
     if(window.Telegram.WebApp?.initDataUnsafe){
       axios.post('https://639a04c7e916a46ec0a6c5d8.mockapi.io/menus',
       {orders:actived,user:window.Telegram.WebApp?.initDataUnsafe})
