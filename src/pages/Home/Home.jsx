@@ -37,7 +37,7 @@ const Home = () => {
     setword(`worded ${tg?.initDataUnsafe?.user?.id}`)
     // navigate('/detail',{state:tg?.initDataUnsafe?.user?.first_name})
     tg.sendData('salom Dostonbek');
-    alert(JSON.stringify({menu:[{name:"Tomato"}],user:window.Telegram.WebApp?.initDataUnsafe}));
+    alert(JSON.stringify({menu:actived,user:window.Telegram.WebApp?.initDataUnsafe}));
   })
 
   function Adding(product) {
