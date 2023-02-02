@@ -38,7 +38,11 @@ const Home = () => {
     // setword(`worded ${tg?.initDataUnsafe?.user?.id}`)
     // navigate('/detail',{state:tg?.initDataUnsafe?.user?.first_name})
     if(window.Telegram.WebApp?.initDataUnsafe?.id){
-      axios.post('https://639a04c7e916a46ec0a6c5d8.mockapi.io/menus',{orders:actived,user:window.Telegram.WebApp?.initDataUnsafe}).then((res)=>{})
+      axios.post('https://639a04c7e916a46ec0a6c5d8.mockapi.io/menus',
+      {orders:actived,user:window.Telegram.WebApp?.initDataUnsafe})
+      .then((res)=>{
+        alert(JSON.stringify({menu:actived,user:window.Telegram.WebApp?.initDataUnsafe}));
+      })
     }
   })
 
